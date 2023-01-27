@@ -3,29 +3,51 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  return arr.sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  arr.sort
+  return arr[-1]+arr[-2]
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  
+  # Find desired sum using two pointers technique
+  arr.sort
+  l = 0
+  r = length(arr)-1
+  
+  while l < r 
+    if arr[l] + arr[r] == n
+      return true
+    elsif arr[l] + arr[r] < n
+      l += 1
+    else # arr[1] + arr[r] > n
+      r -= 1
+  return false
+
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  puts "Hello, #{name}"
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  s = s.downcase
+  if s[0] = "a" or "e" or "i" or "o" or "u" 
+    return true
+  else 
+    return false
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if s.to_i % 4 = 0
+    return true
+  else 
+    return false
 end
 
 # Part 3
